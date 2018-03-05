@@ -34,3 +34,6 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
     logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
 }
 root(ERROR, ['STDOUT'])
+
+logger 'helloworld', DEBUG, ['STDOUT'], false
+logger 'net.heithoff', DEBUG, ['STDOUT'], false

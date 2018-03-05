@@ -1,5 +1,8 @@
 package net.heithoff
 
+import groovy.transform.ToString
+
+@ToString
 class Queue {
 
     static constraints = {
@@ -11,4 +14,6 @@ class Queue {
 
     Date dateCreated
     Date lastUpdated
+
+
 }
