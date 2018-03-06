@@ -8,8 +8,12 @@ class BootStrap {
     def init = { servletContext ->
         if(Environment.current == Environment.DEVELOPMENT) {
             Queue queue = new Queue(firstName: "Robert", lastName: "heithoff",contact: "jessica").save()
+            Queue two = new Queue(firstName: "Robert", lastName: "smith",contact: "jessica").save()
 
             println queue.toString()
+
+            def robert = Queue.findByFirstNameAndLastName("Robert", "heithoff")
+            List<Queue> test = Queue.findAllByFirstNameIlike("robert")
         }
     }
     def destroy = {
